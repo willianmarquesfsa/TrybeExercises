@@ -61,18 +61,40 @@ const books = [{
 ];
 
 // Adicione o código do exercício aqui:
-const expectedResult = [
-    'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
-    'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
-    'Fundação - Ficção Científica - Isaac Asimov',
-    'Duna - Ficção Científica - Frank Herbert',
-    'A Coisa - Terror - Stephen King',
-    'O Chamado de Cthulhu - Terror - H. P. Lovecraft',
+
+const expectedResult = [{
+        age: 31,
+        author: 'Isaac Asimov',
+    },
+    {
+        age: 38,
+        author: 'H. P. Lovecraft',
+    },
+    {
+        age: 39,
+        author: 'Stephen King',
+    },
+    {
+        age: 43,
+        author: 'George R. R. Martin',
+    },
+    {
+        age: 45,
+        author: 'Frank Herbert',
+    },
+    {
+        age: 62,
+        author: 'J. R. R. Tolkien',
+    },
 ];
 
-function formatedBookNames() {
+function nameAndAge() {
     // escreva seu código aqui
-    let resul = books.map((ele) => `${ele.name} - ` + `${ele.genre} - ` + `${ele.author.name}`);
-    return resul
+    return books.map((ele) => {
+        return {
+            age: (ele.releaseYear - ele.author.birthYear),
+            author: ele.author.name
+        }
+    }).sort((a, b) => { if (a.age < b.age) { return -1 } if (a.age > b.age) { return 1 } else return 0 })
 }
-console.log(formatedBookNames())
+console.log(nameAndAge())
