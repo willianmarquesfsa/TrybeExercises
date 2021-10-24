@@ -1,0 +1,23 @@
+{
+  "name": "TrybeExercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willianmarquesfsa/TrybeExercises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willianmarquesfsa/TrybeExercises/issues"
+  },
+  "homepage": "https://github.com/willianmarquesfsa/TrybeExercises#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.5"
+  }
+}
